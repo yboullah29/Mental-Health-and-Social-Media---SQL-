@@ -13,17 +13,12 @@ As a junior data analyst, I designed this project to showcase my skills in:
 ---
 ## 📂 **Project Structure**
 
-mental-health-social-media/ ├── README.md ├── data/ │   └── social_media_mental_health.csv ├── sql_queries/ │   ├── digital_usage_wellbeing.sql │   ├── social_interactions.sql │   ├── physical_mental_health.sql │   ├── platform_behaviors.sql │   └── advanced_insights.sql ├── notebooks/ │   ├── eda_visualizations.ipynb │   ├── correlations_heatmap.ipynb │   ├── platform_comparisons.ipynb │   └── wellbeing_index.ipynb └── visualizations/ ├── screen_time_vs_stress.png ├── interactions_vs_mental_state.png ├── sleep_vs_anxiety.png └── wellbeing_index_by_platform.png
-mental-health-social-media/ ├── README.md ├── data/ │   └── social_media_mental_health.csv ├── sql_queries/ │   ├── digital_usage_wellbeing.sql │   ├── social_interactions.sql │   ├── physical_mental_health.sql │   ├── platform_behaviors.sql │   └── advanced_insights.sql ├── notebooks/ │   ├── eda_visualizations.ipynb │   ├── correlations_heatmap.ipynb │   ├── platform_comparisons.ipynb │   └── wellbeing_index.ipynb └── visualizations/ ├── screen_time_vs_stress.png ├── interactions_vs_mental_state.png ├── sleep_vs_anxiety.png └── wellbeing_index_by_platform.png
-
-
 mental-health-social-media/
 
 │
 ├── README.md                # Project description, dataset info, goals, usage
 ├── data/
-│   └── social_media_mental_health.csv   # Raw dataset 
-│
+      └── social_media_mental_health.csv   # Raw dataset 
 ├── sql_queries/
 │   ├── digital_usage_wellbeing.sql      
 │   ├── social_interactions.sql          
