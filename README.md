@@ -15,28 +15,25 @@ As a junior data analyst, I designed this project to showcase my skills in:
 
 mental-health-social-media/
 
-│
-├── README.md                # Project description, dataset info, goals, usage
-├── data/
-      └── social_media_mental_health.csv   # Raw dataset 
-├── sql_queries/
-│   ├── digital_usage_wellbeing.sql      
-│   ├── social_interactions.sql          
-│   ├── physical_mental_health.sql       
-│   ├── platform_behaviors.sql          
-│   └── advanced_insights.sql            
-│
-├── notebooks/ A CHANGER QUAND CEST FAIT
-│   ├── eda_visualizations.ipynb         # Exploratory Data Analysis with plots
-│   ├── correlations_heatmap.ipynb       # Correlation matrix & heatmap
-│   ├── platform_comparisons.ipynb       # Comparative charts by platform
-│   └── wellbeing_index.ipynb            # Composite index & advanced analysis
-│
-├── visualizations/ A CHANGER QUAND CEST FAIT
-│   ├── screen_time_vs_stress.png        # Example visualization
-│   ├── interactions_vs_mental_state.png
-│   ├── sleep_vs_anxiety.png
-│   └── wellbeing_index_by_platform.png
+- README.md
+- data/
+  - social_media_mental_health.csv
+- sql_queries/
+  - digital_usage_wellbeing.sql
+  - social_interactions.sql
+  - physical_mental_health.sql
+  - platform_behaviors.sql
+  - advanced_insights.sql
+- notebooks/
+  - eda_visualizations.ipynb
+  - correlations_heatmap.ipynb
+  - platform_comparisons.ipynb
+  - wellbeing_index.ipynb
+- visualizations/
+  - screen_time_vs_stress.png
+  - interactions_vs_mental_state.png
+  - sleep_vs_anxiety.png
+  - wellbeing_index_by_platform.png
 
 ## 📂 **Data Structure**
 
@@ -57,7 +54,7 @@ The dataset contains the following columns:
 - mood_level: Self-reported mood score (scale from 0 to 10)
 - mental_state: Target label : Healthy, At_Risk, or Stressed
 
-⚙️ **Analysis Goals**
+## ⚙️ **Analysis Goals**
 
 This project is designed to analyze multiple dimensions of how social media and digital habits affect mental health.
 Through SQL queries and exploratory analysis, I will examine:
@@ -68,14 +65,14 @@ Through SQL queries and exploratory analysis, I will examine:
 - Advanced insights: building composite indicators (e.g., a Digital Well‑Being Index), testing predictive factors of mental state, and highlighting at‑risk population segments.
 The goal is to generate meaningful insights that show how raw data can be transformed into actionable knowledge about well‑being in the digital age.
 
-🛠️ **Tools and Technologies**
+## 🛠️ **Tools and Technologies**
 
 - SQL for querying and insight generation
 - Python (pandas, numpy, matplotlib, seaborn) for deeper analysis and visualization
 - Jupyter Notebook for exploration and documentation
 - Markdown for presenting results
 
-📚 **Source**
+## 📚 **Source**
 The dataset used in this project was obtained from Kaggle:
 https://www.kaggle.com/datasets/sonalshinde123/social-media-mental-health-indicators-dataset/data 
 
