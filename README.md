@@ -14,6 +14,7 @@ As a junior data analyst, I designed this project to showcase my skills in:
 ## 📂 **Project Structure**
 
 mental-health-social-media/
+
 │
 ├── README.md                # Project description, dataset info, goals, usage
 ├── data/
