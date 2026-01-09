@@ -1,4 +1,4 @@
-## Preparation and Cleaning of the Table
+--Preparation and Cleaning of the Table
 
 --Duplicate Check
 
@@ -30,7 +30,6 @@ ORDER BY person_name;
 
 --However, this approach still produced ambiguous cases: two distinct individuals could share the same name, the same age, and the same date of recording, but differ by gender.
 --The final solution was therefore to also include the column gender, which defines a complete logical key
-
 
 SELECT *
 FROM mental_health_social_media_dataset
@@ -73,7 +72,8 @@ FROM mental_health_social_media_dataset;
 --The output of this query showed 0 for all columns, meaning that there are no NULL values in the dataset.
 
 --Conclusion
---This verification confirms that the dataset is complete and consistent, with no missing entries across personal information, digital usage, social interactions, or health indicators. This is an important quality check, as it ensures that subsequent analyses will not be biased or distorted by missing data.
+--This verification confirms that the dataset is complete and consistent, with no missing entries across personal information, digital usage, 
+--social interactions, or health indicators. This is an important quality check, as it ensures that subsequent analyses will not be biased or distorted by missing data.
 
 
 --Detection of Abnormal Values in Numeric Columns
@@ -96,7 +96,9 @@ FROM mental_health_social_media_dataset;
 --The query returned 0 for all columns, meaning that no abnormal values were detected in the dataset.
 
 --Conclusion
---This verification confirms that the dataset is clean and consistent with respect to numeric ranges. All values fall within logical boundaries (age, screen time, sleep, activity, and health indicators). This strengthens the reliability of subsequent analyses, as there are no distortions caused by outliers or unrealistic entries.
+--This verification confirms that the dataset is clean and consistent with respect to numeric ranges. 
+--All values fall within logical boundaries (age, screen time, sleep, activity, and health indicators). 
+--This strengthens the reliability of subsequent analyses, as there are no distortions caused by outliers or unrealistic entries.
 
 
 --Column Type Verification
@@ -108,26 +110,27 @@ PRAGMA table_info(mental_health_social_media_dataset);
 --All columns are correctly typed (INTEGER, REAL, TEXT) according to the expected schema.
 --The date column appears as TEXT rather than DATE.
 
-
 --In SQLite, there is no native DATE type. Dates are typically stored as TEXT, REAL, or INTEGER.
 --Therefore, using TEXT for the date column is correct and consistent with SQLite practices.
+
 
 --Format Verification
 
 --The date format in the dataset is currently MMDDYYYY.
 --The goal was to transform it into DDMMYYYY for better readability and consistency.
---Since SQLite does not directly support date format conversions, a CTE (Common Table Expression) was used to extract the day, month, and year components and reconstruct them in the desired format.
+--Since SQLite does not directly support date format conversions, a CTE (Common Table Expression) was used to extract the day, month, and year components 
+--and reconstruct them in the desired format.
 
 
 --Creating a New Table from the Original Dataset
 
---Although the initial table did not contain errors (no NULL values, no abnormal values), I chose to recreate a new table from the original data in order to strengthen the schema and improve data quality.
+--Although the initial table did not contain errors (no NULL values, no abnormal values), I chose to recreate a new table from the original data in order to strengthen 
+--the schema and improve data quality.
 --Enhancements applied:
 --Constraints: Explicit rules were added on columns (NOT NULL, CHECK) to ensure data validity at the moment of insertion.
 --Unique identifier: An id column with PRIMARY KEY AUTOINCREMENT was introduced to guarantee a reliable primary key and facilitate manipulation.
 --Date handling: Since SQLite does not support a native DATE type, the date_record column is stored as TEXT.
---The original format was MM/DD/YYYY.
---I transformed it into DD/MM/YYYY for consistency.
+--The original format was MM/DD/YYYY. I transformed it into DD/MM/YYYY for consistency.
 --This transformation was achieved using a CTE (Common Table Expression) that extracts the day, month, and year components and reconstructs them in the desired format.
 
 -- Create the new table with constraints
@@ -207,5 +210,7 @@ SELECT
 FROM parts
 WHERE p1 > 0 AND p2s > 0;
 
---I strengthened the schema by adding constraints, introducing a primary key, and ensuring consistent date formatting. The result is a more robust and reliable table, ready for further analysis.
+--I strengthened the schema by adding constraints, introducing a primary key, and ensuring consistent date formatting. 
+--The result is a more robust and reliable table, ready for further analysis.
 --The table to use now is mental_health_social_media_correct 
+
