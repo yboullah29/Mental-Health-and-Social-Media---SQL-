@@ -66,6 +66,14 @@ Through SQL queries and exploratory analysis, I will examine:
 - Advanced insights: building composite indicators (e.g., a Digital Well‑Being Index), testing predictive factors of mental state, and highlighting at‑risk population segments.
 The goal is to generate meaningful insights that show how raw data can be transformed into actionable knowledge about well‑being in the digital age.
 
+## 📚 **Limitations**
+
+- No data cleaning required: The original dataset did not contain NULL values or abnormal entries, so no additional cleaning steps were necessary.
+- SQLite constraints: Since the project was implemented in SQLite, several limitations had to be considered:
+  - Restricted functions: SQLite does not support all advanced SQL functions available in other RDBMS
+  - No native DATE type: Dates must be stored as TEXT, REAL, or INTEGER. In this project, dates were stored as TEXT.
+  - Date format conversion: The original format (MM/DD/YYYY) was transformed into DD/MM/YYYY using a Common Table Expression (CTE). This process is more complex in SQLite                                 compared to databases with built-in date formatting functions.
+
 ## 🛠️ **Tools and Technologies**
 
 - SQL for querying and insight generation
