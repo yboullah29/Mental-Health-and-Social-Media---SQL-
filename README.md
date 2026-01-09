@@ -18,6 +18,8 @@ mental-health-social-media/
 - README.md
 - data/
   - social_media_mental_health.csv
+  - data_preparation.sql
+  - data_cleaning_normalization.sql
 - sql_queries/
   - digital_usage_wellbeing.sql
   - social_interactions.sql
