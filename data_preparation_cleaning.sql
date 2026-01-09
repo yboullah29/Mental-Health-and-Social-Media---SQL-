@@ -15,7 +15,8 @@ WHERE (person_name, date) IN (
 )
 ORDER BY person_name;
 
---This query did return results, but they were false duplicates: some individuals appeared multiple times at different dates or using different platforms, which is normal in the context of longitudinal tracking.
+--This query did return results, but they were false duplicates: some individuals appeared multiple times at different dates 
+--or using different platforms, which is normal in the context of longitudinal tracking.
 --To refine the detection, the column age was added
 
 SELECT *
@@ -28,7 +29,8 @@ WHERE (person_name, date, age) IN (
 )
 ORDER BY person_name;
 
---However, this approach still produced ambiguous cases: two distinct individuals could share the same name, the same age, and the same date of recording, but differ by gender.
+--However, this approach still produced ambiguous cases: two distinct individuals could share the same name, the same age, and the same date of recording, 
+--but differ by gender.
 --The final solution was therefore to also include the column gender, which defines a complete logical key
 
 
@@ -42,7 +44,12 @@ WHERE (person_name, date, age, gender) IN (
 )
 ORDER BY person_name;
 
---The verification process showed that duplicate detection cannot be limited to one or two columns. Only the combination person_name + age + date + gender ensures reliable identification of duplicates and avoids false positives.
+--The verification process showed that duplicate detection cannot be limited to one or two columns. 
+--Only the combination person_name + age + date + gender ensures reliable identification of duplicates and avoids false positives.
 
 --Conclusion
---The analysis demonstrated that there are no real duplicates in the dataset. To facilitate the identification and manipulation of rows in the database, it is preferable to add a technical primary key in the form of an auto‑incremented identifier (id). This unique identifier simplifies queries, improves readability, and makes it easier to manage relationships between tables.
+--The analysis demonstrated that there are no real duplicates in the dataset. 
+--To facilitate the identification and manipulation of rows in the database, it is preferable to add a technical primary key 
+--in the form of an auto‑incremented identifier (id). This unique identifier simplifies queries, improves readability, 
+--and makes it easier to manage relationships between tables.
+
