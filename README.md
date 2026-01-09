@@ -46,8 +46,8 @@ The dataset contains the following columns:
 - platform : Social media platform the person uses
 - daily_screen_time_min : Total daily device screen time in minutes
 - social_media_time_min : Total time spent on social media in minutes per day
-- negative_interactions_count: Number of negative or harmful interactions experienced online
-- positive_interactions_count	: Number of positive or supportive interactions experienced online
+- negative_interactions_count: Number of negative or harmful interactions experienced online per day
+- positive_interactions_count	: Number of positive or supportive interactions experienced online per day
 - sleep_hours	: Total number of hours the person sleeps per day
 - physical_activity_min: Daily physical activity in minutes per day
 - anxiety_level: Self-reported anxiety score (scale from 0 to 10)
