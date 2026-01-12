@@ -32,11 +32,6 @@ mental-health-social-media/
   - platform_behaviors.ipynb
   - advanced_insights.ipynb
 - visualizations/
-  - digital_usage_wellbeing.png
-  - social_interactions.png
-  - physical_mental_health.png
-  - platform_behaviors.png
-  - advanced_insights.png
 
 ## 📂 **Data Structure**
 
