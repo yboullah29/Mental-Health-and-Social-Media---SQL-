@@ -26,15 +26,17 @@ mental-health-social-media/
   - platform_behaviors.sql
   - advanced_insights.sql
 - notebooks/
-  - eda_visualizations.ipynb
-  - correlations_heatmap.ipynb
-  - platform_comparisons.ipynb
-  - wellbeing_index.ipynb
+  - digital_usage_wellbeing.ipynb
+  - social_interactions.ipynb
+  - physical_mental_health.ipynb
+  - platform_behaviors.ipynb
+  - advanced_insights.ipynb
 - visualizations/
-  - screen_time_vs_stress.png
-  - interactions_vs_mental_state.png
-  - sleep_vs_anxiety.png
-  - wellbeing_index_by_platform.png
+  - digital_usage_wellbeing.png
+  - social_interactions.png
+  - physical_mental_health.png
+  - platform_behaviors.png
+  - advanced_insights.png
 
 ## 📂 **Data Structure**
 
